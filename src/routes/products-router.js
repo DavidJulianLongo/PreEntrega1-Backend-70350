@@ -1,5 +1,5 @@
 import { Router } from "express";
-import {productsManager }from "../managers/products-manager.js";
+import { productsManager } from "../managers/products-manager.js";
 import validateProduct from '../middlewares/validateProduct.js';
 
 const prodRouter = Router();
@@ -36,7 +36,7 @@ prodRouter.post('/', validateProduct, async (req, res) => {
     }
 })
 
-prodRouter.put('/:pid', validateProduct, async (req, res) =>{
+prodRouter.put('/:pid', validateProduct, async (req, res) => {
     try {
         const { pid } = req.params;
         const updatedProduct = await productsManager.updateProd(pid, req.body);
