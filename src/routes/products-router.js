@@ -2,6 +2,7 @@ import { Router } from "express";
 import { productsManager } from "../managers/products-manager.js";
 import validateProduct from '../middlewares/validateProduct.js';
 
+
 const prodRouter = Router();
 
 
@@ -29,7 +30,10 @@ prodRouter.get('/:pid', async (req, res) => {
 
 prodRouter.post('/', validateProduct, async (req, res) => {
     try {
-        const newProduct = await productsManager.createProduct(req.body);
+        const newProduct = await productsManager.createProduct({
+            ...req.body,
+            thumbnails: req.body.thumbnails
+        });
         res.status(201).json(newProduct);
     } catch (error) {
         res.status(500).json({ message: error.message });

@@ -7,7 +7,7 @@ cartRouter.post('/', async (req, res) => {
     try {
         res.json(await cartManager.createCart());
     } catch (error) {
-        res.status(404).json({ message: error.message });
+        res.status(500).json({ message: error.message });
     }
 })
 

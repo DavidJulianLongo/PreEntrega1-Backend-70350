@@ -1,1 +1,44 @@
-[{"id":"69c3dcb9-7fe4-4d79-a5fe-1ac68dd9d59e","title":"Nuevo Producto","description":"Descripción del producto","code":56,"price":29.99,"stock":100,"category":"Categoría","thumbnails":[]},{"id":"9173d8ee-03b1-4584-b263-5bc16cb53996","title":"Nuevo Producto 2","description":"Descripción del producto","code":"PROD123","price":500,"stock":10,"category":"Categoría","thumbnails":[]},{"id":"e0495bf4-2f1d-426a-b4b2-f82a3bd27f48","title":"Nuevo Producto 3","description":"Descripción del producto","code":"PROD123","price":50,"stock":145,"category":"Categoría","thumbnails":[]},{"id":"59f68444-4ef2-41fa-afd8-b9cc9d20b7ce","title":"Nuevo Producto 3","description":"Descripción del producto","code":"PROD123","price":50,"stock":145,"category":"Categoría","thumbnails":[]}]
+[
+    {
+        "id": "9173d8ee-03b1-4584-b263-5bc16cb53996",
+        "title": "Nuevo Producto 2",
+        "description": "Descripción del producto",
+        "code": "PROD123",
+        "price": 500,
+        "stock": 10,
+        "category": "Categoría",
+        "thumbnails": []
+    },
+    {
+        "id": "e0495bf4-2f1d-426a-b4b2-f82a3bd27f48",
+        "title": "Nuevo Producto 3",
+        "description": "Descripción del producto",
+        "code": "PROD123",
+        "price": 50,
+        "stock": 145,
+        "category": "Categoría",
+        "thumbnails": []
+    },
+    {
+        "id": "4795337f-8568-492d-87a9-92d7647b0a6e",
+        "title": "Nuevo Producto 4",
+        "description": "Descripción del producto",
+        "code": "PROD123",
+        "price": 50,
+        "stock": 145,
+        "category": "Categoría",
+        "thumbnails": []
+    },
+    {
+        "id": "b3973fe8-3ca6-4e14-a785-ff119fe1eaac",
+        "title": "Nuevo Producto",
+        "description": "Descripción del producto",
+        "code": "PROD123",
+        "price": 50,
+        "stock": 145,
+        "category": "Categoría",
+        "thumbnails": [
+            "https://www.casadelaudio.com/Image/0/750_750-156-MOR-619_(6).png"
+        ]
+    }
+]
