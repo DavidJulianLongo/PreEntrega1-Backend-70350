@@ -45,33 +45,6 @@ class CartManager {
         }
     }
 
-    // async addToCart (cartId, prodId){
-    //     try {
-    //         const existingProd = await productsManager.getProdById(prodId); 
-    //         if(!existingProd) throw new Error ('product does not exist');
-    //         const existingCart = await this.getCartById(cartId);
-    //         if(!existingCart) throw new Error ('cart does not exist');
-    //         const carts =  await this.getAllCarts();
-    //         const prodInCart = existingCart.products.find(p => p.id === prodId);
-    //         if(!prodInCart) {
-    //             const prod = {
-    //                 id : prodId,
-    //                 quantity: 1
-    //             }
-    //             existingCart.products.push(prod);
-    //         }else existingCart.quantity += 1;
-
-    //         const updatedCarts = carts.map(cart => {
-    //             if(cart.id === cartId) return existingCart;
-    //             return cart;
-    //         })
-
-    //         await fs.promises.writeFile(this.path, JSON.stringify(updatedCarts));
-    //         return existingCart;
-    //     } catch (error) {
-    //         throw new Error(error.message);
-    //     }
-    // }
 
     async addToCart (cartId, prodId) {
         const product = await productsManager.getAllProd();
@@ -84,11 +57,11 @@ class CartManager {
 
         const prodInCart = cart.products.find(p => p.id === prodId);
         if(!prodInCart){
-            const prod = {
+            const product = {
                 id: prodId,
                 quantity: 1
             }
-            cart.products.push(prod);
+            cart.products.push(product);
         }else prodInCart.quantity += 1;
 
         await fs.promises.writeFile(this.path, JSON.stringify(carts));
